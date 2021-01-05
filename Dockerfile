@@ -1,6 +1,4 @@
-FROM python:latest
-WORKDIR /app
-COPY requirment.txt .
-RUN pip install flask -r requirment.txt
-COPY /app .
-CMD ["python","index.py"]
+ARG VERSION=20.4
+FROM ubuntu:${VERSION}
+RUN apt-get update -y
+CMD ["bash"]
